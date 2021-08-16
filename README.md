@@ -1,15 +1,12 @@
-The application should have a db.json file on the back end that will be used to store and retrieve notes using the fs module.
+# Note taker 
 
-The following HTML routes should be created:
+## Description
 
-<!-- GET /notes should return the notes.html file. -->
+This app can be used to create, save, and delete notes. 
 
-<!-- GET * should return the index.html file. -->
+## Usage
+You can find the application at the following website https://git.heroku.com/glacial-dawn-02414.git
 
-The following API routes should be created:
+## Contribution 
+Narisa Bartelt created this app using starter code provided by Xandromus at https://github.com/coding-boot-camp/miniature-eureka.git.
 
-GET /api/notes should read the db.json file and return all saved notes as JSON.
-
-POST /api/notes should receive a new note to save on the request body, add it to the db.json file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
-
-Bonus: DELETE /api/notes/:id should receive a query parameter containing the id of a note to delete. In order to delete a note, you'll need to read all notes from the db.json file, remove the note with the given id property, and then rewrite the notes to the db.json file.
