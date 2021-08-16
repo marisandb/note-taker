@@ -6,7 +6,6 @@ const { nanoid } = require('nanoid')
 // GET /api/notes should read the db.json file and return all saved notes as JSON.
 router.get('/notes', (req, res) => {
     let results = notes;
-    console.log(results)
     res.json(results);
 });
 
@@ -16,16 +15,12 @@ router.delete('/notes/:id', (req, res) => {
 })
 
 router.post('/notes', (req, res) =>{
-    // req.body to save incoming content
-    console.log(req.body);
-
     let note = {
         id: nanoid(),
         title: req.body.title,
         text: req.body.text
     }
-
-    // add note to json file
+    
     note = newNote(note, notes);
     res.json(note);
 })
